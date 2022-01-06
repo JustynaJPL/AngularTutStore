@@ -1,1 +1,14 @@
 <h2 class=" h2 text-center">Products</h2>
+<div class="cool" *ngFor="let product of products">
+  <h3 class="h3">
+    <a [title]="product.name + ' details'" href="">
+      {{product.name}}
+    </a>
+  </h3>
+  <p *ngIf="product.description">
+    Description: {{product.description}}
+  </p>
+  <button type="button" class="btn btn-primary" (click)="share()">
+    Share
+  </button>
+</div>
