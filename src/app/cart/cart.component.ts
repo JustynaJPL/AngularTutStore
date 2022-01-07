@@ -9,10 +9,14 @@ import {FormBuilder} from "@angular/forms";
 })
 export class CartComponent implements OnInit {
   
+   items = this.cartService.getItems();
+  // This code sets the items using the CartService getItems() 
+  // method. You defined this method when you created cart.service.ts.
+  
   // To gather the user's name and address, use the FormBuilder 
   // group() method to set the checkoutForm property to 
   // a form model containing name and address fields.
-  public checkoutForm = this.formBuilder.group({
+  checkoutForm = this.formBuilder.group({
       name:'',
       address: ''});
 
@@ -23,9 +27,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  items = this.cartService.getItems();
-  // This code sets the items using the CartService getItems() 
-  // method. You defined this method when you created cart.service.ts.
+ 
 
   onSubmit():void{
     this.items = this.cartService.clearCart();
