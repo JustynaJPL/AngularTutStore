@@ -23,4 +23,5 @@ export class CartService {
     return this.http.get<{type:string, price:number}[]>("assets/shipping.json");
       //here were using http string to get data from an external file
   }
+  
 }

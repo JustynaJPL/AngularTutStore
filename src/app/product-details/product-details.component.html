@@ -1,8 +1,19 @@
 <h2>Product Details</h2>
+<div class="row ">
+  <div *ngIf="product" class=" products-cont col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="col-4 justify-content-center">
+      <img class="img-thumbnail image-prop" [src]='product.image' alt="image">
 
-<div *ngIf="product">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
-  <button class="btn btn-success" (click) = "addToCart(product)">Buy</button>
+      <!-- here there was a problem because in products.ts there was an 
+      interface where no prop image was clasified but it was added
+      to the value source because I neded them before
+      !!! IMPORTANT THING WHILE ADDING INTERFACE !!!! -->
+    </div>
+    <div class="col-8 justify-content-center">
+      <h3>{{ product.name }}</h3>
+      <h4>{{ product.price | currency }}</h4>
+      <p>{{ product.description }}</p>
+    </div>
+    <button class="row btn btn-success" (click)="addToCart(product)">Buy</button>
+  </div>
 </div>
