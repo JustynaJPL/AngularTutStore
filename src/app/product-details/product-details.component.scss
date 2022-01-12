@@ -1,11 +1,25 @@
-h2{
-	display: block;
-	margin: 20px;
+h2 {
+  display: block;
+  margin: 20px;
 }
 
-.products-cont{
-	h3, h4,p{
-		margin: 30px;
-		display: flex;
-	}
+.products-cont {
+
+
+  h3,
+  h4,
+  p {
+    margin: 30px;
+  }
+
+  
 }
+.col-12 {
+
+    display: inline-grid;
+
+
+    button {
+    	width: 150px;
+    }
+  }
