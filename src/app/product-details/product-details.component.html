@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container shadow p-3 mb-5 bg-white rounded">
   <h2>Product Details</h2>
-  <div *ngIf="product" class="products-cont">
+  <div *ngIf="product" class=" row">
     <div class="col-4 justify-content-center">
       <img class="img-thumbnail image-prop" [src]='product.image' alt="image">
       <!-- here there was a problem because in products.ts there was an 
@@ -12,10 +12,23 @@
       <h3>{{ product.name }}</h3>
       <h4>{{ product.price | currency }}</h4>
       <p>{{ product.description }}</p>
+      <div class="col-12 align-items-end">
+        <button class="center btn btn-outline-info" (click)="addToCart(product)">
+        Buy
+      </button>
+      </div>
+      
     </div>
-    <div class="col-12">
-      <button class="align-self-center btn btn-success " (click)="addToCart(product)">Buy</button>
+    <div class="row backToCart">
+      <button class="btn btn-outline-warning" routerLink = "/">
+      Continue shopping
+    </button>
+    <button class="btn btn-outline-success" routerLink="/cart">
+      Go to cart
+    </button>
     </div>
+    
+
     
   </div>
 </div>

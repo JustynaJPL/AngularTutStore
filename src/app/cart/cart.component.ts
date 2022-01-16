@@ -8,8 +8,10 @@ import {FormBuilder} from "@angular/forms";
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  
+
+    
    items = this.cartService.getItems();
+
   // This code sets the items using the CartService getItems() 
   // method. You defined this method when you created cart.service.ts.
   

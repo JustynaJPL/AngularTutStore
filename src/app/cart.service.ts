@@ -13,6 +13,7 @@ export class CartService {
     this.items.push(product);
   }
   getItems(){
+    console.log(this.items);
     return this.items;
   }
   clearCart(){
@@ -20,7 +21,7 @@ export class CartService {
     return this.items;
   }
   getShippingPrices(){
-    return this.http.get<{type:string, price:number}[]>("assets/shipping.json");
+    return this.http.get<{type:string, price:number , description:string}[]>("assets/shipping.json");
       //here were using http string to get data from an external file
   }
   

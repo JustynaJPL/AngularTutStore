@@ -21,5 +21,14 @@ h2 {
 
     button {
     	width: 150px;
+      display:inline-block;
+    }
+  }
+
+  .backToCart{
+    margin: 30px;
+    display:inline-block;
+    button{
+      margin: 20px;
     }
   }

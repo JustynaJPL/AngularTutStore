@@ -1,27 +1,42 @@
-<h3>Cart</h3>
-<p>
-  <a routerLink="/shipping">Shipping Prices</a>
-</p>
-<div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
-  <span>{{ item.price | currency }}</span>
+<div class="container shadow p-3 mb-5 bg-white rounded">
+  <h3>Cart</h3>
+  <p>
+    <button class="btn btn-outline-secondary" routerLink="/shipping">
+      Shipping Prices
+    </button>
+  </p>
+  <div class="cart-item" *ngFor="let item of items">
+    <div class="card">
+      <h5 class="card-header">{{ item.name }}</h5>
+      <div class="card-body">
+        <h5 class="card-title">{{ item.price | currency }}</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="" *ngIf="items.length == 0">
+    <span class="h3 noItems">
+      You have no items in the cart
+    </span>
+  </div>
+  <button class="btn btn-outline-warning inline-block backToProducts" routerLink="/">
+    Back to the product list
+  </button>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">
+        Name
+      </label>
+      <input id="name" type="text" class="form-control" formControlName="name" placeholder="name@example.com">
+    </div>
+    <div>
+      <label for="address">
+        Address
+      </label>
+      <input id="address" type="text" formControlName="address" class="form-control" placeholder="1st Avenue 5B">
+    </div>
+    <button class="btn btn-outline-success" type="submit">
+      Purchase
+    </button>
+  </form>
 </div>
-<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
-  <div>
-    <label for="name">
-      Name
-    </label>
-    <input id="name" type="text" formControlName="name">
-  </div>
-
-  <div>
-    <label for="address">
-      Address
-    </label>
-    <input id="address" type="text" formControlName="address">
-  </div>
-
-  <button class="button btn-success" type="submit">Purchase</button>
-
-</form>
