@@ -2,26 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
-## Development server
+This code is a better and more functional version of Angular first tutorial on official A site.
+This version includes better css make with scss, few tweeks in typescript and better routing with back tracking options. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+--- IMPORTANT NOTICE ---
+On the product site where all of them are listed, click on anything besides visible buttons to go to the product site to "make a purchase". There was a reason in tut to include product view so I decided to keep the functionality and just go to the product page via clicking anything. 
+Later on, quite some time was already used for this project and I tried to deploy project as soon as possible and this function passed unnoticed. It's not a problem IMO but may be a little bit unclear what to do in the app, but it's a very simple app.   
